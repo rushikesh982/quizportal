@@ -16,3 +16,8 @@ ol li
 {
   background-color: #71BBB2;
 }
+.btn:hover
+{
+  background-color: #71BBB2;
+  color: black;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import question from './que.jsx'
 
 
 export default function Qiz(){
@@ -21,12 +22,15 @@ export default function Qiz(){
                 <div className="row">
                     <div className="row mt-3">
                         <div className="col-12 question">
-                            <h2>which of the following correct name of react js ?</h2>
+                            <h2>{question[0].quename}</h2>
                             <ol className="list-group mt-4 mb-3">
-                                <li className="list-group-item"><input type="radio"/> react</li>
-                                <li className="list-group-item"><input type="radio"/> react</li>
-                                <li className="list-group-item"><input type="radio"/> react</li>
-                                <li className="list-group-item"><input type="radio"/> react</li>
+                                {
+                                    question[0].queans.map((item)=>{
+                                        return(
+                                        <li className="list-group-item"><input type="radio" name="answer"/>{item.ans}</li>
+                                        )
+                                    })
+                                }
                             </ol>
                         </div>
                             <div className="btn col-12 p-3">next</div>
